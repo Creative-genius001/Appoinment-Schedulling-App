@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@layer components {
+  .button {
+    background-color: theme('colors.darkpurple');
+    margin-top: 20px;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 9px 0;
+    border-radius: 6px;
+    font-size: .9rem;
+    transition: all ease-in-out;
+  }
+  .button:hover{
+    background-color:#7245d4;
+  }
+  /* ... */
+}

@@ -1,0 +1,44 @@
+import Image from "next/image";
+import Link from "next/link";
+import frontImage from '../../public/assets/frontimage.jpg';
+import styles from ".././styles/Login.module.css"
+import Logo from '../../public/assets/Uniben.png';
+
+
+const Login = () => {
+    return ( 
+        <>
+        <div className={styles.hero_section}>
+            <div className="w-[45%] p-4 h-[100vh] rounded-lg ">
+                <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
+            </div>
+            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-slate-300">
+                
+                <div className="w-[50%] mx-auto">
+                     <h1 className="font-bold text-[2rem] mb-0 ">Welcome back</h1> 
+                    <p className="text-[.9rem] text-[#585858] ">Please enter your details to login.</p>  
+                <div className="mt-4">
+                    <form>
+                        <div className="flex flex-col">
+                            <label className="text-[.9rem] font-medium mb-1 ">Email</label>
+                            <input className={styles.input} placeholder="Enter your email"></input>
+                        </div>
+                        <div className="flex flex-col mt-3">
+                            <label className="text-[.9rem] font-medium mb-1">Password</label>
+                            <input className={styles.input} placeholder="Enter your password"></input>
+                        </div>
+                        <p className="text-[.9rem] mt-4 font-medium text-center ">Forgot password? <Link href={"/"}><span className="font-semibold text-[#7F56DA] ">Click here</span></Link></p>
+                        <button className="button" type="submit">Log in</button>
+                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Do not have an account? <Link href={"/signup"}><span className="font-semibold text-[#7F56DA] ">Sign up</span></Link></p>
+                    </form>
+                </div>
+                </div>
+               
+            </div>
+        </div>
+        </>
+        
+     );
+}
+ 
+export default Login;
