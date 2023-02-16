@@ -16,7 +16,7 @@ const Login = () => {
                 
                 <div className="w-[50%] mx-auto">
                      <h1 className="font-bold text-[2rem] mb-0 ">Welcome back</h1> 
-                    <p className="text-[.9rem] text-[#585858] ">Please enter your details to login.</p>  
+                    <p className="text-[1rem] text-[#585858] ">Please enter your details to login.</p>  
                 <div className="mt-4">
                     <form>
                         <div className="flex flex-col">
@@ -27,9 +27,9 @@ const Login = () => {
                             <label className="text-[.9rem] font-medium mb-1">Password</label>
                             <input className={styles.input} placeholder="Enter your password"></input>
                         </div>
-                        <p className="text-[.9rem] mt-4 font-medium text-center ">Forgot password? <Link href={"/"}><span className="font-semibold text-[#7F56DA] ">Click here</span></Link></p>
+                        <p className="text-[.9rem] mt-4 text-center ">Forgot password? <Link href={"/"}><span className="font-semibold text-[#7F56DA] hover:underline  ">Click here</span></Link></p>
                         <button className="button" type="submit">Log in</button>
-                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Do not have an account? <Link href={"/signup"}><span className="font-semibold text-[#7F56DA] ">Sign up</span></Link></p>
+                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Do not have an account? <Link href={"/signup"}><span className="font-semibold text-[#7F56DA] hover:underline  ">Sign up</span></Link></p>
                     </form>
                 </div>
                 </div>

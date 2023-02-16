@@ -15,6 +15,6 @@
     border: 2px solid rgb(223, 223, 223);
 }
 
-.input:focus{
+.input:hover{
     border: 2px solid #c5abfd;
 }
