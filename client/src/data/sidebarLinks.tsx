@@ -1,6 +1,6 @@
-import {RiHome5Line, RiLogoutBoxLine} from 'react-icons/ri'
+import {RiHomeLine, RiLogoutBoxLine} from 'react-icons/ri'
 import {MdDateRange} from 'react-icons/md'
-import {CgProfile} from 'react-icons/cg'
+import {CgProfile, CgLogOut} from 'react-icons/cg'
 
 interface sideLinkProp {
         name: String,
@@ -12,7 +12,7 @@ interface sideLinkProp {
 export const sidebarLinks : sideLinkProp[] = [
     {
         name: "Home",
-        icon: <RiHome5Line />,
+        icon: <RiHomeLine />,
         toLink: "/"
     },
     {
@@ -27,7 +27,7 @@ export const sidebarLinks : sideLinkProp[] = [
     },
     {
         name: "Logout",
-        icon: <RiLogoutBoxLine />,
+        icon: <CgLogOut />,
         toLink: "/login"
     }
 

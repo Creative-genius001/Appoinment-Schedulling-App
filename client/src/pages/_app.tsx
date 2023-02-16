@@ -7,7 +7,10 @@ import "../styles/index.css"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={styles.body}>
+      <Layout>
         <Component {...pageProps} />
+      </Layout>
+        
      </div>
   )
   

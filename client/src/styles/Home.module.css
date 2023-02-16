@@ -1,6 +1,25 @@
 .navbar{
-    height: 60px;
-    background-color: red;
-    padding: 0 20px;
+    height: 70px;
+    /* background-color: red; */
+    background-color: white;
+    padding: 8px 60px 8px 0;
+    width: 83vw;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+.home{
+   
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.body{
+    background-color: #F7F7F7;
+}
+
 
