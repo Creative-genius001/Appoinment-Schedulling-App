@@ -8,22 +8,21 @@ const Sidebar = () => {
     const [activeSidebarButton, setActiveSidebarButton] = useState<Boolean>(true);
 
     return ( 
-        <div className=" w-[17vw] h-[100vh] dark:bg-[#1E2026] px-4   " style={{backgroundColor: "white"}}>
-            <div className="mt-2 mb-8">
-                <span className="font-bold text-darkpurple text-[2rem]">HEALTHPY</span>
-            </div>
-            <div className="">
-                {sidebarLinks?.map((item, index)=>(
-                    <> 
-                        
-                            <Link href={item.toLink} key={index} className="bg-[#fff] w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1]  cursor-pointer " style={{}}>
-                                <span className="text-[#585858] text-[1.5rem]">{item.icon}</span>
-                                <p className="text-[#3b3b3b] text-[1rem] ml-2">{item.name}</p>
-                            </Link>
-                        
-                        
-                    </>
-                ))}
+        <div className="sidebar w-[17vw] h-screen dark:bg-[#1E2026]  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
+            <div className="px-4 w-full">
+                <div className="py-4  ">
+                    <span className="font-bold text-lightblue text-[2rem]">HEALTHPY</span>
+                </div>
+                <div className="">
+                    {sidebarLinks?.map((item, index)=>(
+                        <> 
+                                <Link href={item.toLink} key={index} className="bg-[#fff] w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1]  cursor-pointer " style={{}}>
+                                    <span className="text-[#585858] text-[1.5rem]">{item.icon}</span>
+                                    <p className="text-[#3b3b3b] text-[1rem] ml-2">{item.name}</p>
+                                </Link> 
+                        </>
+                    ))}
+                </div>
             </div>
         </div>
      );

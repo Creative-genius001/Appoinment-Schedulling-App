@@ -11,7 +11,7 @@
 
 @layer components {
   .button {
-    background-color: theme('colors.darkpurple');
+    background-color: theme('colors.lightblue');
     margin-top: 20px;
     color: white;
     display: block;
@@ -22,12 +22,9 @@
     transition: all ease-in-out;
   }
   .button:hover{
-    background-color:#7245d4;
+    background-color:#4793f5;
   }
 
-  .card-container{
-    
-    
-  }
+
   /* ... */
 }

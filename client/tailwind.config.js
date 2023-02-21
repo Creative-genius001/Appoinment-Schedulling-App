@@ -10,7 +10,9 @@ module.exports = {
 	],
 	theme: {
 		colors: {
+			lightblue: "#1081E8",
 			darkpurple: "#7F56DA",
+			darkblue: "#0F2851",
 			darkgrey: "#F5F5F5",
 		},
 		extend: {},

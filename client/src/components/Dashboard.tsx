@@ -6,17 +6,21 @@ import AppointmentCard from './AppointmentCard';
 
 const Dashboard = () => {
     return ( 
-        <div className=' mt-[70px] py-12 px-8  h-auto w-[83vw]'>
+        <div className=' mt-[70px]  h-auto w-[83vw]'>
+            <div className='py-12 px-8 '>
+                <h1 className='text-3xl font-bold mb-2 '>Book An Appointment</h1>
+            <p className='mb-2 text-[1.1rem] '>The best patient appointment booking system.</p>
             <div className='bg-[#fff] rounded-xl p-8 w-[70%]  '>
                 <div className='flex flex-row justify-between items-center'>
                     <div>
-                        <h3 className='text-2xl font-bold'>Upcoming Appointments</h3>
+                        <h3 className='text-2xl font-semibold'>Upcoming Appointments</h3>
                         <p className='text-[#4d4d4d]'>You have 2 appointments already booked</p>
                     </div>
-                   <Link href={"/appointment"}><span className='text-darkpurple font-bold cursor-pointer '>See All</span></Link>
+                   <Link href={"/appointment"}><span className='text-lightblue font-bold cursor-pointer focus:underline '>See All</span></Link>
 
                 </div>
-                <AppointmentCard />
+                <AppointmentCard />                
+                 </div>
             </div>
         </div>
       );
