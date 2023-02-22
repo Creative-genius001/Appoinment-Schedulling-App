@@ -6,7 +6,7 @@ const AppointmentCard = () => {
            <div className="w-full h-auto  mt-6">
                 {AppointmentData?.map((data, index)=>(
                     <>
-                        <div key={index} style={data.isActive ? {borderLeft: "4px solid #7F56DA"} : {borderLeft: "4px solid #F85C5D"}} className="card-container flex flex-row justify-between items-center pl-4 rounded-sm mb-4 ">
+                        <div key={index} style={data.isActive ? {borderLeft: "4px solid #1081E8"} : {borderLeft: "4px solid #F85C5D"}} className="card-container flex flex-row justify-between items-center pl-4 rounded-sm mb-4 ">
                             <div className="flex flex-col">
                                 <span className="text-lg font-semibold  truncate">{data.name}</span>
                                 <span className="text-md font-medium">ID: {data.id}</span>

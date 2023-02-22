@@ -3,12 +3,25 @@ import { useState } from "react";
 import { sidebar } from "@/types/sidebarStyles";
 import { sidebarLinks } from "@/data/sidebarLinks";
 import Link from "next/link";
+import {BiMenu} from "react-icons/bi"
 
 const Sidebar = () => {
     const [activeSidebarButton, setActiveSidebarButton] = useState<Boolean>(true);
+    const [activeSidebarNum, setActiveSidebarNum] = useState<number>(0);
+    const handleBtnStyle = (index :number) => {
+        setActiveSidebarNum(index);
+    }
+
+    let btnstyle = "w-full flex flex-row items-center mb-2 py-4 px-3 rounded-xl hover:bg-[#f1f1f1] cursor-pointer "
+
+    console.log(activeSidebarNum)
+    
 
     return ( 
-        <div className="sidebar w-[17vw] h-screen dark:bg-[#1E2026]  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
+        <>
+            <BiMenu className="hamburger absolute text-lightblue text-[2rem]  " />
+            <div className="sidebar relative w-[17vw] h-screen dark:bg-[#1E2026] z-10  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
+            
             <div className="px-4 w-full">
                 <div className="py-4  ">
                     <span className="font-bold text-lightblue text-[2rem]">HEALTHPY</span>
@@ -16,15 +29,17 @@ const Sidebar = () => {
                 <div className="">
                     {sidebarLinks?.map((item, index)=>(
                         <> 
-                                <Link href={item.toLink} key={index} className="bg-[#fff] w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1]  cursor-pointer " style={{}}>
-                                    <span className="text-[#585858] text-[1.5rem]">{item.icon}</span>
-                                    <p className="text-[#3b3b3b] text-[1rem] ml-2">{item.name}</p>
+                                <Link href={item.toLink} key={index} className={activeSidebarNum === index ? 'text-lightblue bg-[#e9f3ff] font-medium ' + btnstyle : 'text-[#3b3b3b] bg-[#fff] ' + btnstyle} onClick={()=> handleBtnStyle(index)}>
+                                    <span className=" text-[1.5rem]">{item.icon}</span>
+                                    <p className=" text-[1rem] ml-2">{item.name}</p>
                                 </Link> 
                         </>
                     ))}
                 </div>
             </div>
         </div>
+        </>
+        
      );
 }
  

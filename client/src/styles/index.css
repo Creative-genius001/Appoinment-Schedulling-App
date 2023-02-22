@@ -22,9 +22,16 @@
     transition: all ease-in-out;
   }
   .button:hover{
-    background-color:#4793f5;
+    background-color:#4792f5;
   }
 
+  @media (max-width:768px) {
+    .sidebar{
+      visibility: hidden;
+
+    }
+    
+  }
 
   /* ... */
 }

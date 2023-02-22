@@ -9,10 +9,10 @@ const Login = () => {
     return ( 
         <>
         <div className={styles.hero_section}>
-            <div className="w-[45%] p-4 h-[100vh] rounded-lg ">
+            <div className="w-[45%] p-4 h-[100vh] rounded-lg bg-[white] ">
                 <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
             </div>
-            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-slate-300">
+            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
                 
                 <div className="w-[50%] mx-auto">
                      <h1 className="font-bold text-[2rem] mb-0 ">Welcome back</h1> 
@@ -27,13 +27,12 @@ const Login = () => {
                             <label className="text-[.9rem] font-medium mb-1">Password</label>
                             <input className={styles.input} placeholder="Enter your password"></input>
                         </div>
-                        <p className="text-[.9rem] mt-4 text-center ">Forgot password? <Link href={"/"}><span className="font-semibold text-[#7F56DA] hover:underline  ">Click here</span></Link></p>
+                        <p className="text-[.9rem] mt-4 text-center ">Forgot password? <Link href={"/"}><span className="font-semibold text-lightblue hover:underline  ">Click here</span></Link></p>
                         <button className="button" type="submit">Log in</button>
-                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Do not have an account? <Link href={"/signup"}><span className="font-semibold text-[#7F56DA] hover:underline  ">Sign up</span></Link></p>
+                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Do not have an account? <Link href={"/signup"}><span className="font-semibold text-lightblue hover:underline  ">Sign up</span></Link></p>
                     </form>
                 </div>
-                </div>
-               
+                </div>  
             </div>
         </div>
         </>

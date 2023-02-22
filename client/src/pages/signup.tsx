@@ -10,10 +10,10 @@ const Signup = () => {
     return ( 
         <>
         <div className={styles.hero_section}>
-            <div className="w-[45%] h-[100vh] p-4 rounded-lg  ">
+            <div className="w-[45%] h-[100vh] p-4 rounded-lg bg-[white] ">
                 <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
             </div>
-            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-slate-300">
+            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
                 
                 <div className="w-[50%] mx-auto">
                      <h1 className="font-bold text-[2rem] mb-0 ">Sign Up</h1> 
@@ -38,7 +38,7 @@ const Signup = () => {
                         </div>
         
                         <button className="button" type="submit">Sign up</button>
-                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Already have an account? <Link href={"/login"}><span className="font-semibold text-[#7F56DA] hover:underline ">Log in</span></Link></p>
+                        <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Already have an account? <Link href={"/login"}><span className="font-semibold text-lightblue hover:underline ">Log in</span></Link></p>
                     </form>
                 </div>
                 </div>
