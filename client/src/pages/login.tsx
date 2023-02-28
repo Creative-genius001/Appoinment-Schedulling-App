@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import frontImage from '../../public/assets/frontimage.jpg';
 import styles from ".././styles/Login.module.css"
-import Logo from '../../public/assets/Uniben.png';
 
 
 const Login = () => {

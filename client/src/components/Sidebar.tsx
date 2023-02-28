@@ -19,7 +19,7 @@ const Sidebar = () => {
 
     return ( 
         <>
-            <BiMenu className="hamburger absolute text-lightblue text-[2rem]  " />
+            <BiMenu className="hamburger absolute left-[20px] top-[20px] text-lightblue text-[2rem] z-30 cursor-pointer  " />
             <div className="sidebar relative w-[17vw] h-screen dark:bg-[#1E2026] z-10  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
             
             <div className="px-4 w-full">

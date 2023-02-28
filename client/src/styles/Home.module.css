@@ -10,6 +10,9 @@
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
+    box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
+-webkit-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
+-moz-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
 }
 
 .home{
@@ -20,7 +23,12 @@
 
 
 .body{
-    background-color: #F7F7F7;
+    background-color: #fafafa;
 }
 
 
+@media (max-width: 760px) {
+    .navbar{
+         padding: 8px 20px 8px 0;
+    }
+}

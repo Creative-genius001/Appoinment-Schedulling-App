@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@syncfusion/ej2": "^20.4.51",
+    "@syncfusion/ej2-base": "^20.4.51",
+    "@syncfusion/ej2-react-calendars": "^20.4.51",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",

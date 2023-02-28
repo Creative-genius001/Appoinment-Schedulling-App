@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styles from "@/styles/Login.module.css"
 import {MdModeEditOutline} from 'react-icons/md'
 // import styles from '@/styles/Home.module.css'
+import Image from 'next/image';
+import Avatar from "../../public/assets/avatar.jpeg"
 
 const Profile = () => {
     return ( 
@@ -17,8 +19,8 @@ const Profile = () => {
             
             <div className='relative flex justify-start items-start h-auto w-full '>
                  <div className='bg-[white] w-1/3 '>
-                <div className='profile-pic w-[180px] h-[180px] rounded-[50%] bg-darkblue '>
-
+                <div className='profile-pic w-[180px] h-[180px] rounded-[50%] '>
+                     <Image src={Avatar} alt="avatar" className="img w-full h-full object-cover overflow-hidden rounded-[50%] " />
                 </div>
                 <div className='absolute top-[140px] left-[130px] hover:drop-shadow-xl bg-lightblue w-8 h-8 rounded-[50%] flex justify-center items-center cursor-pointer'>
                     <MdModeEditOutline className='text-[white]' />
