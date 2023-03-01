@@ -29,7 +29,7 @@ const Sidebar = () => {
                 <div className="">
                     {sidebarLinks?.map((item, index)=>(
                         <> 
-                                <Link href={item.toLink} key={index} className={activeSidebarNum === index ? 'text-lightblue bg-[#e9f3ff] font-medium ' + btnstyle : 'text-[#3b3b3b] bg-[#fff] ' + btnstyle} onClick={()=> handleBtnStyle(index)}>
+                                <Link href={item.toLink} key={index} className={activeSidebarNum === index ? 'text-lightblue bg-[#e9f3ff] font-medium ' + btnstyle : 'text-[#868686] bg-[#fff] ' + btnstyle} onClick={()=> handleBtnStyle(index)}>
                                     <span className=" text-[1.5rem]">{item.icon}</span>
                                     <p className=" text-[1rem] ml-2">{item.name}</p>
                                 </Link> 
@@ -39,7 +39,7 @@ const Sidebar = () => {
             </div>
         </div>
         </>
-        
+
      );
 }
  
