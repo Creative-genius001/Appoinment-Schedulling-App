@@ -1,6 +1,6 @@
 import { AppointmentData } from "@/data/appointmentData";
 
-const AppointmentCard = () => {
+const UpcomingAppt = () => {
     return ( 
         <>
            <div className="w-full h-auto  mt-6">
@@ -25,4 +25,4 @@ const AppointmentCard = () => {
      );
 }
  
-export default AppointmentCard;
+export default UpcomingAppt;

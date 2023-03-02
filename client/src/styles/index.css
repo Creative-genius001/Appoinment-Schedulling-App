@@ -28,6 +28,15 @@
   .hamburger {
     visibility: hidden;
   }
+  
+  .calendar{
+    border: 2px solid rgb(223, 223, 223);
+  }
+
+   .calendar:hover{
+    border: 2px solid #abc1fd !important;
+  }
+ 
 
   @media (max-width:768px) {
     .sidebar{

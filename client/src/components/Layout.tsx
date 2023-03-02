@@ -6,15 +6,18 @@ import Sidebar from './Sidebar'
 
 const publicSans = Public_Sans({ subsets: ['latin'] })
 
-
 interface Props {
     children?: ReactNode
 }
+
 const Layout = ({children}: Props) => {
     return ( 
         <div className={publicSans.className}>
-            
-             {children}
+            <Navbar />
+            <div className='flex flex-row'>
+                 <Sidebar />
+                {children}
+            </div>
         </div>
         
      );

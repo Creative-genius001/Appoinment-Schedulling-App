@@ -11,7 +11,7 @@ const onChange: DatePickerProps['onChange'] = (date, dateString) => {
 const Calendar = () => {
     return ( 
         <div className=" ">
-           <DatePicker onChange={onChange} defaultValue={dayjs(new Date())} format='YYYY-MM-DD'/>
+           <DatePicker className='calendar' onChange={onChange} defaultValue={dayjs(new Date())} format='YYYY-MM-DD'/>
         </div>
      );
 }

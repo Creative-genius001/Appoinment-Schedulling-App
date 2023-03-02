@@ -10,12 +10,9 @@ import Avatar from "../../public/assets/avatar.jpeg"
 const Profile = () => {
     return ( 
         <>
-        
-        <Navbar />
-        <div className='flex flex-row'>
-        <Sidebar /> 
+       
         <div className=' mt-[70px] bg-[#ffffff] py-12 px-8 h-auto w-[83vw]'>
-            <h2 className='text-2xl font-bold mb-8'>Update your Profile</h2>
+            <h2 className='text-3xl font-bold mb-8'>Update your Profile</h2>
             
             <div className='relative flex justify-start items-start h-auto w-full '>
                  <div className='bg-[white] w-1/3 '>
@@ -49,7 +46,6 @@ const Profile = () => {
             </div>
            
         </div>      
-      </div>
         </>
      );
 }
