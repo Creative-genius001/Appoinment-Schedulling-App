@@ -12,7 +12,7 @@ const Sidebar = () => {
         setActiveSidebarNum(index);
     }
 
-    let btnstyle = "w-full flex flex-row items-center mb-2 py-4 px-3 rounded-xl hover:bg-[#f1f1f1] cursor-pointer "
+    let btnstyle = "w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1] cursor-pointer "
 
     console.log(activeSidebarNum)
     
@@ -23,7 +23,7 @@ const Sidebar = () => {
             <div className="sidebar relative w-[17vw] h-screen dark:bg-[#1E2026] z-10  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
             
             <div className="px-4 w-full">
-                <div className="py-4  ">
+                <div className="py-4 px-2 ">
                     <span className="font-bold text-lightblue text-[2rem]">HEALTHPY</span>
                 </div>
                 <div className="">
