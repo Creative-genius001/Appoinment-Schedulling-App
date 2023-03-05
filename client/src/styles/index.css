@@ -25,9 +25,7 @@
   .button:hover{
     background-color:#4792f5;
   }
-  .hamburger {
-    visibility: hidden;
-  }
+  
   
   .calendar{
     border: 2px solid rgb(223, 223, 223);
@@ -40,12 +38,10 @@
 
   @media (max-width:768px) {
     .sidebar{
-      visibility: hidden;
+      
 
     }
-    .hamburger{
-      visibility: visible;
-    }
+   
     
   }
 

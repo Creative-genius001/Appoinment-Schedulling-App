@@ -1,26 +1,43 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { sidebar } from "@/types/sidebarStyles";
 import { sidebarLinks } from "@/data/sidebarLinks";
 import Link from "next/link";
-import {BiMenu} from "react-icons/bi"
+
 
 const Sidebar = () => {
-    const [activeSidebarButton, setActiveSidebarButton] = useState<Boolean>(true);
     const [activeSidebarNum, setActiveSidebarNum] = useState<number>(0);
+    
     const handleBtnStyle = (index :number) => {
         setActiveSidebarNum(index);
     }
 
-    let btnstyle = "w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1] cursor-pointer "
+    const [width, setWidth] = useState<number>(0);
+    const [activeMenu, setActiveMenu] = useState<Boolean>(true);
+    useEffect(() => {
+       const handleResize = () => setWidth(window.innerWidth);
 
-    console.log(activeSidebarNum)
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+  useEffect(() => {
+    if (width <= 740) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [width]);
+
+    let btnstyle = "w-full flex flex-row items-center mb-2 py-4 px-2 rounded-xl hover:bg-[#f1f1f1] cursor-pointer "
     
 
     return ( 
         <>
-            <BiMenu className="hamburger absolute left-[20px] top-[20px] text-lightblue text-[2rem] z-30 cursor-pointer  " />
-            <div className="sidebar relative w-[17vw] h-screen dark:bg-[#1E2026] z-10  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
+            {activeMenu && <div className="sidebar relative w-[17vw] h-screen dark:bg-[#1E2026] z-10  " style={{backgroundColor: "white", borderRight: "2px solid #F7F7F7"}}>
             
             <div className="px-4 w-full">
                 <div className="py-4 px-2 ">
@@ -33,11 +50,12 @@ const Sidebar = () => {
                                     <span className=" text-[1.5rem]">{item.icon}</span>
                                     <p className=" text-[1rem] ml-2">{item.name}</p>
                                 </Link> 
-                        </>
+                        </  >
                     ))}
                 </div>
             </div>
-        </div>
+        </div>}
+            
         </>
 
      );

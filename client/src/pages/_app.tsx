@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import styles from '@/styles/Home.module.css'
 import "../styles/index.css"
 import "@/styles/css/navbar.css"
+import "@/styles/css/profile.css"
 import { StateProvider } from '@/context/ContextProvider'
 import {useRouter} from 'next/router';
 

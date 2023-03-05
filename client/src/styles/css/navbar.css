@@ -1,11 +1,33 @@
+.hamburger {
+    visibility: hidden;
+  }
+.schedule-btn{
+    padding: 1rem;
+}
+
 @media (max-width:760px) {
     .img-div{
-        width: 2rem;
-        height: 2rem;
-        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 20px;
     }
     .schedule-btn{
-
+        padding: 1rem;
+        font-size: .8rem;
+        border-radius: 15px;
+        line-height: 14px;
+        margin-right: 0rem;
+    }
+     .hamburger{
+      visibility: visible;
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+    .name{
+        font-size: .8rem;   
+        line-height: 13px;
+        margin-right: 0;
     }
 }
 

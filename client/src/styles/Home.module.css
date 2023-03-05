@@ -1,18 +1,19 @@
 .navbar{
     height: 70px;
-    /* background-color: red; */
     background-color: white;
     padding: 8px 60px 8px 0;
     width: 100vw;
     position: absolute;
     right: 0;
+    left: 0;
+    top: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     z-index: 1;
     box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
--webkit-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
--moz-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
+    -moz-box-shadow: 3px -7px 34px -10px rgba(0,0,0,0.12);
 }
 
 .home{
@@ -27,8 +28,11 @@
 }
 
 
-@media (max-width: 760px) {
+
+@media screen and (min-width: 250px) and (max-width: 760px) {
     .navbar{
-         padding: 8px 20px 8px 0;
+         padding: 8px 20px;
+        
     }
+    
 }

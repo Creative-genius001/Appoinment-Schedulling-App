@@ -9,7 +9,7 @@ const Login = () => {
     return ( 
         <>
         <div className={styles.hero_section}>
-            <div className="w-[45%] p-4 h-[100vh] rounded-lg bg-[white] ">
+            <div className= "w-[45%] p-4 h-[100vh] rounded-lg bg-[white] ">
                 <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
             </div>
             <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
