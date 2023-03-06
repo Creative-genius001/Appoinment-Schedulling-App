@@ -1,0 +1,18 @@
+@media screen and (min-width: 250px) and (max-width: 760px) {
+    .hero-img{
+       display: none;
+    }
+    .main-container{
+        width: 100vw;
+    }
+    .main-container2{
+        width: 100vw;
+        padding: 0 1.2rem;
+    }
+    .main-container2 h1{
+        font-size: 1.5rem;
+    }
+    .main-container2 p{
+        font-size: .9rem;
+    }
+}

@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const Sidebar = () => {
     const [activeSidebarNum, setActiveSidebarNum] = useState<number>(0);
-    
     const handleBtnStyle = (index :number) => {
         setActiveSidebarNum(index);
     }

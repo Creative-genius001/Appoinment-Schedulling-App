@@ -10,27 +10,27 @@ const Signup = () => {
     return ( 
         <>
         <div className={styles.hero_section}>
-            <div className="w-[45%] h-[100vh] p-4 rounded-lg bg-[white] ">
+            <div className="hero-img w-[45%] h-[100vh] p-4 rounded-lg bg-[white] ">
                 <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
             </div>
-            <div className="w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
+            <div className="main-container w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
                 
-                <div className="w-[50%] mx-auto">
+                <div className="main-container2 w-[50%] mx-auto">
                      <h1 className="font-bold text-[2rem] mb-0 ">Sign Up</h1> 
                     <p className="text-[.9rem] text-[#585858] ">Please register to use the app.</p>  
                 <div className="mt-4">
                     <form>
                         <div className="flex flex-col">
-                            <label className="text-[.9rem] font-medium mb-1 ">Card ID</label>
-                            <input className={styles.input} placeholder="Enter your card id"></input>
+                            <label className="text-[.9rem] font-medium mb-1 ">Firstname</label>
+                            <input className={styles.input} placeholder="Enter your firstname"></input>
+                        </div>
+                        <div className="flex flex-col mt-3">
+                            <label className="text-[.9rem] font-medium mb-1 ">Lastname</label>
+                            <input className={styles.input} placeholder="Enter your lastname"></input>
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Email</label>
                             <input className={styles.input} placeholder="Enter your email"></input>
-                        </div>
-                        <div className="flex flex-col mt-3">
-                            <label className="text-[.9rem] font-medium mb-1 ">Full name</label>
-                            <input className={styles.input} placeholder="Enter your full name"></input>
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1">Password</label>

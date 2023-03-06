@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import "../styles/index.css"
 import "@/styles/css/navbar.css"
 import "@/styles/css/profile.css"
+import "@/styles/css/signup_login.css"
 import { StateProvider } from '@/context/ContextProvider'
 import {useRouter} from 'next/router';
 

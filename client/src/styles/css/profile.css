@@ -1,6 +1,8 @@
 @media screen and (min-width: 250px) and (max-width: 760px) {
     .main{
         width: 100vw;
+        padding: 0 1.3rem;
+        
     }
     .main h2{
         font-size: 1.4rem;
@@ -8,6 +10,8 @@
     }
     .container{
         flex-direction: column;
+        width: 100%;
+       
     }
     .profile-pic{
         width: 100px;
@@ -20,8 +24,13 @@
         left: 80px;
     }
     .profile-container{
-        width: 100vw;
+        width: 100%;
         margin: 2rem 0 0 0;
         padding: 0;
+        
+    }
+    .pic-container{
+       
+        width: 100%;
     }
 }

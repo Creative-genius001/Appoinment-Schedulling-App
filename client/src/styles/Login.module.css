@@ -1,14 +1,14 @@
 .hero_section{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
 .input{
     width: 100%;
     outline: none;
-    padding: 9px 12px;
+    padding: 7px 12px;
     font-size: .9rem;
     border-radius: 7px;
     background-color: transparent;
