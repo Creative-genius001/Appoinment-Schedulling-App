@@ -20,7 +20,7 @@ const Dashboard = () => {
                         <div className="w-full h-1/2 mt-1">
                             <h3 className="text-lg font-bold   ">Upcoming Appointments</h3>
                             <p className="leading-tight text-base mt-1">You have 2 upcoming appointments</p>
-                            <button type="button" className="bg-lightblue hover:bg-[#4792f5] p-2 mt-3 font-medium text-[white] rounded-lg text-sm w-full " >Open</button>
+                            <Link href='/appointments'><button type="button" className="bg-lightblue hover:bg-[#4792f5] p-2 mt-3 font-medium text-[white] rounded-lg text-sm w-full " >Open</button></Link>
                         </div>           
                     </div>  
 
@@ -31,7 +31,7 @@ const Dashboard = () => {
                         <div className="w-full h-1/2 mt-1">
                             <h3 className="text-lg font-bold   ">Profile</h3>
                             <p className="leading-tight text-base mt-1">Edit and update your profile details</p>
-                            <button type="button" className="bg-lightblue hover:bg-[#4792f5] p-2 mt-3 font-medium text-[white] rounded-lg text-sm w-full " >Edit</button>
+                            <Link href='/profile'><button type="button" className="bg-lightblue hover:bg-[#4792f5] p-2 mt-3 font-medium text-[white] rounded-lg text-sm w-full " >Edit</button></Link>
                         </div>           
                     </div>  
                 </div>           

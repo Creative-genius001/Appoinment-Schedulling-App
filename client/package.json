@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.11",
     "@next/font": "13.1.6",
     "@syncfusion/ej2": "^20.4.51",
     "@syncfusion/ej2-base": "^20.4.51",
@@ -24,8 +25,10 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.5",
     "react-icons": "^4.7.1",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

@@ -1,17 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
-import frontImage from '../../public/assets/frontimage.jpg';
+import doc from '../../public/assets/doc.jpg';
 import styles from ".././styles/Login.module.css"
-import Logo from '../../public/assets/Uniben.png';
+import { useRouter } from "next/router";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { Alert } from "antd";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+
+const schema = yup.object().shape({
+  firstname: yup.string().required(),
+  lastname: yup.string().required(),
+  email: yup.string().email().required(),
+  password: yup.string().required().min(8, 'Password must be at least 8 characters').max(20, 'Password cannot exceed 20 characters'),
+});
+
+
+type FormData = yup.InferType<typeof schema>;
+
 
 
 const Signup = () => {
 
+    const router = useRouter()
+    const { register, resetField, formState: { errors }, handleSubmit } = useForm<FormData>({
+        mode: "onChange",
+        resolver: yupResolver(schema),
+        defaultValues: {
+        firstname: "",
+        lastname:"",
+        email: "",
+        password: ""
+    }
+    });
+    
+
+
+    const onSubmit = (data: FormData) => {
+        console.log(data);
+
+        router.push('/')
+    }
+
     return ( 
         <>
         <div className={styles.hero_section}>
-            <div className="hero-img w-[45%] h-[100vh] p-4 rounded-lg bg-[white] ">
-                <Image alt="frontimage" src={frontImage} className="img w-[100%] h-[100%] object-cover rounded-lg "/>
+            <div className="hero-img w-[45%] h-[100vh]rounded-lg bg-[white] ">
+                <Image alt="frontimage" src={doc} className="img w-[100%] h-full object-contain rounded-lg "/>
             </div>
             <div className="main-container w-[55%] h-[100vh] flex flex-col justify-center items-center bg-[white] ">
                 
@@ -19,25 +55,29 @@ const Signup = () => {
                      <h1 className="font-bold text-[2rem] mb-0 ">Sign Up</h1> 
                     <p className="text-[.9rem] text-[#585858] ">Please register to use the app.</p>  
                 <div className="mt-4">
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="flex flex-col">
                             <label className="text-[.9rem] font-medium mb-1 ">Firstname</label>
-                            <input className={styles.input} placeholder="Enter your firstname"></input>
+                            <input className={styles.input}  {...register("firstname", { required: true })} placeholder="Enter your firstname"></input>
+                            {errors.firstname && <Alert message={errors.firstname?.message} type="error" showIcon className="mt-2"/>}
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Lastname</label>
-                            <input className={styles.input} placeholder="Enter your lastname"></input>
+                            <input className={styles.input} {...register("lastname", { required: true })} placeholder="Enter your lastname"></input>
+                            {errors.lastname && <Alert message={errors.lastname?.message} type="error" showIcon className="mt-2"/>}
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Email</label>
-                            <input className={styles.input} placeholder="Enter your email"></input>
+                            <input className={styles.input}  {...register("email", { required: true })} placeholder="Enter your email"></input>
+                            {errors.email && <Alert message={errors.email?.message} type="error" showIcon className="mt-2"/>}
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1">Password</label>
-                            <input className={styles.input} placeholder="Enter your password"></input>
+                            <input type='password'  {...register("password", { required: true })} className={styles.input} placeholder="Enter your password"></input>
+                            {errors.password && <Alert message={errors.password?.message} type="error" showIcon className="mt-2"/>}
                         </div>
         
-                        <button className="button" type="submit">Sign up</button>
+                        <input className="button" type="submit" value="Sign up" />
                         <p className="text-center text-[#585858] mt-4 text-[.9rem] ">Already have an account? <Link href={"/login"}><span className="font-semibold text-lightblue hover:underline ">Log in</span></Link></p>
                     </form>
                 </div>
