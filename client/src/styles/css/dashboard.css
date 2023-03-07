@@ -1,0 +1,21 @@
+@media screen and (min-width:250px) and (max-width: 760px) {
+    .card-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        row-gap: 50px;
+        width: 100%;
+
+    }
+    .dashboard-container{
+        width: 100vw;
+
+    }
+    .dashboard-container h1{
+        line-height: 25px;
+    }
+    .dashboard-container p{
+        line-height: 20px;
+    }
+
+}

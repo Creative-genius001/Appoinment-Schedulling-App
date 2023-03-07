@@ -1,9 +1,16 @@
+.main-container{
+    background-image: url('/client/public/assets/bg.jpg');
+    /* background-size: cover; */
+}
 @media screen and (min-width: 250px) and (max-width: 760px) {
     .hero-img{
        display: none;
     }
     .main-container{
         width: 100vw;
+       background-image: url('/client/public/assets/bg.jpg');
+       background-position: center;
+       background-size: cover;
     }
     .main-container2{
         width: 100vw;

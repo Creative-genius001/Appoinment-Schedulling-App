@@ -1,5 +1,9 @@
 import { data } from "@/data/appointmentData";
+import Image from "next/image";
 import Link from 'next/link';
+import png1 from '../../public/assets/01.png'
+import png3 from '../../public/assets/03.png'
+
 
 const UpcomingAppt = () => {
 
@@ -10,34 +14,15 @@ const UpcomingAppt = () => {
 
     return ( 
         <>
-             <div className='bg-[#fff] rounded-xl p-8 w-[70%] shadow-xl  '>
-                <div className='flex flex-row justify-between items-center'>
-                    <div>
-                        <h3 className='text-2xl font-semibold'>Upcoming Appointments</h3>
-                        <p className='text-[#4d4d4d]'>You have 2 appointments already booked</p>
-                    </div>
-                   <Link href={"/appointments"}><span className='text-lightblue font-bold cursor-pointer focus:underline '>See All</span></Link>
-
-                </div>
-                 <div className="w-full h-auto  mt-6  ">
-                {data?.map((data, index)=>(
-                    
-                    <>
-                        <div key={index} style={data.status ? {borderLeft: "4px solid #1081E8"} : {borderLeft: "4px solid #F85C5D"}} className="card-container flex flex-row justify-between items-center pl-4 rounded-sm mb-4 ">
-                            <div className="flex flex-col">
-                                <span className="text-lg font-semibold  truncate">{data.name}</span>
-                                <span className="text-md font-medium">ID: {data.id}</span>
-                            </div>
-                            <div className="flex flex-col items-end">
-                                <span className="text-sm font-bold text-[#616161] ">{processDate(data.time)}</span>
-                                <span className=" font-medium">{data.date.toLocaleDateString()}</span>
-                            </div>
-                            
-                        </div>
-                        
-                    </>
-                ))}
-             </div>                
+             <div className='bg-[#fff] flex flex-col  rounded-xl p-4 w-[250px] h-[auto] shadow-xl  '>
+                <div className="w-full h-[125px]"> 
+                    <Image alt='' src={png1} className='img object-cover w-full h-full'  />
+                </div> 
+                <div className="w-full h-1/2">
+                    <h3 className="text-lg font-bold  ">Upcoming Appointments</h3>
+                    <p className="leading-tight text-base ">You have 2 upcoming appointments</p>
+                    <button type="button" className="bg-lightblue p-2 mt-3 font-medium text-[white] rounded-lg text-sm w-[90px] " >Open</button>
+                </div>           
             </div>
           
         </>

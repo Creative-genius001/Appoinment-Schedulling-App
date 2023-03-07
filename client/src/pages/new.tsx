@@ -1,16 +1,15 @@
 import Calendar from "@/components/Calendar";
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
 import Time from "@/components/Time";
 import styles from "@/styles/Login.module.css"
+
 
 
 const New = () => {
     return (  
         <>
             <div className="main w-[83vw] py-12 px-12 mt-[70px] bg-[white] ">
-                <div className='flex  items-center  bg-[#ffffff] w-full '>
-                    <div className='sm:w-full lg:w-[30%] '>
+                <div className='flex  items-center w-full '>
+                    <div className='new-container sm:w-full lg:w-[30%] '>
                         <h2 className='lg:text-2xl font-bold mb-2'>Create new Appointment</h2>
                         <p className="mb-8 leading-tight text-[#3b3b3b]  ">All appointments should be scheduled atleast a day ahead.</p>
                         <form className=''>
@@ -32,6 +31,7 @@ const New = () => {
                         </form>
                     </div>
                     </div> 
+
             </div>   
         </>
     );
