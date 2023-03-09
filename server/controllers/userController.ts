@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
 const  {User} = require('../models/user')
 import { IUser } from "../types/userTypes";
+import { hashPassword } from "../lib/hashPassword";
+import { createToken } from "../lib/jwt";
+
+
 
 exports.getUsers = async (req: Request, res: Response) =>{
     let user = await User.find()
@@ -19,8 +23,13 @@ exports.createUser = async (req: Request, res: Response) =>{
         image: null
     })
     try{
+        let hash: any = await hashPassword(password);
+        user.password = hash;
         await user.save()
-        res.status(201).json(user)
+        const token = createToken(user._id)
+        res.cookie('ckie',{...user, token},{maxAge: 900000, httpOnly: true})
+        res.status(201).json({user:{...user, token}})
+        
     }
     catch(err){
         console.error({error: err})
