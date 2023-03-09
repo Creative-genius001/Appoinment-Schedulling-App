@@ -1,8 +1,7 @@
 import { Table, Tag, Button } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { data, DataType } from '@/data/appointmentData'
-
-
+                                                                                                                                                                                                                                                                                                                                       
 const columns: ColumnsType<DataType> = [
   {
     title: 'ID',
@@ -50,9 +49,11 @@ const columns: ColumnsType<DataType> = [
 const Appointment = () => {
     return ( 
     <>
-        <div className=' mt-[70px] bg-[#ffffff] py-12 px-8 h-auto w-[83vw]'>
+        <div className='main mt-[70px] bg-[#ffffff] py-12 px-8 h-auto w-[83vw]'>
             <h2 className='text-3xl font-bold mb-8'>Appointments</h2>
-            <Table columns={columns} dataSource={data} />
+            <div className='table-container'>
+              <Table columns={columns} dataSource={data} />
+            </div>  
         </div>      
     </> 
         );

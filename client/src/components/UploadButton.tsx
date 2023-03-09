@@ -17,8 +17,10 @@ const UploadButton: React.FC = () => {
     // 2. Read from response and show file link
     newFileList = newFileList.map((file) => {
       if (file.response) {
+        console.log(file)
         // Component will show file.url as link
         file.url = file.response.url;
+
       }
       return file;
     });
@@ -27,7 +29,7 @@ const UploadButton: React.FC = () => {
   };
 
   const props = {
-    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    action: '',
     onChange: handleChange,
     multiple: true,
   };

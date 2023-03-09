@@ -42,7 +42,7 @@ const New = () => {
                                 <label className="text-[.9rem] font-medium mb-1 mt-4 ">Appointment description</label>
                                 <textarea className={styles.input} placeholder="Short description"></textarea>
                             </div>
-                            <button onClick={e=> {e.preventDefault(); handleSubmit()}} className="button " type="submit">Create</button>
+                            <button className="button " type="submit">Create</button>
                         </form>
                     </div>
                     </div> 

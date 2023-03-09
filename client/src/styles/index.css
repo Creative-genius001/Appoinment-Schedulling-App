@@ -36,14 +36,19 @@
   }
  
 
-  @media (max-width:768px) {
-    .sidebar{
-      
-
+  @media screen and (max-width:768px) and (min-width: 250px) {
+    .table-container{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
-   
-    
-  }
+    .ant-table-wrapper {
+      flex: 1;
+    }
 
-  /* ... */
+    .ant-table {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
 }

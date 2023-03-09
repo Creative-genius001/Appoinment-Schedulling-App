@@ -32,15 +32,15 @@ const Profile = () => {
                  <form className=''>
                         <div className="flex flex-col">
                             <label className="text-[.9rem] font-medium mb-1 ">Firstname</label>
-                            <input className={styles.input} value="Ovie" placeholder="New firstname.."></input>
+                            <input type='text' className={styles.input}  placeholder="New firstname.." />
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Lastname</label>
-                            <input className={styles.input} value="Ighosuakpo" placeholder="New lastname.." />
+                            <input className={styles.input} value="Ighosuakpo" placeholder="New lastname.."/    >
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Email</label>
-                            <input className={styles.input} value="chris@gmail.com" placeholder="Enter your email"></input>
+                            <input className={styles.input} value="chris@gmail.com" placeholder="Enter your email" />
                         </div>
                         
         
