@@ -10,3 +10,7 @@ export const createToken = (id : string) => {
         },
     );
 }
+
+export const decodeToken = async (token: string) => {
+    return await jwt.verify(token, JWT_SECRET_KEY);
+}

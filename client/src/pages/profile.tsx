@@ -18,7 +18,7 @@ const Profile = () => {
             
             <div className='container relative flex justify-start items-start h-auto w-full '>
                  <div className='pic-container bg-[white] w-1/3 flex flex-row items-center '>
-                <div className='profile-pic w-[180px] h-[180px] rounded-[50%] mr-4 '>
+                <div className='profile-pic w-[140px] h-[140px] rounded-[50%] mr-4 '>
                      <Image src={Avatar} alt="avatar" className="img w-full h-full object-cover overflow-hidden rounded-[50%] " />
                 </div>
                 {/* <div className='file-icon absolute top-[140px] left-[130px] hover:drop-shadow-xl bg-lightblue w-8 h-8 rounded-[50%] flex justify-center items-center cursor-pointer'>
@@ -36,7 +36,7 @@ const Profile = () => {
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Lastname</label>
-                            <input className={styles.input} value="Ighosuakpo" placeholder="New lastname.."/    >
+                            <input className={styles.input} value="Ighosuakpo" placeholder="New lastname.."/>
                         </div>
                         <div className="flex flex-col mt-3">
                             <label className="text-[.9rem] font-medium mb-1 ">Email</label>
@@ -44,7 +44,7 @@ const Profile = () => {
                         </div>
                         
         
-                        <button className="button " type="submit">Update</button>
+                        <button className="button " type="submit">Update Profile</button>
                     </form>
             </div>
             </div>
