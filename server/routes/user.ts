@@ -7,9 +7,8 @@ const router = express.Router()
 
 router.use(cookieParser());
 
-router.get('/profile', Auth, getUser);
 router.post('/signup', signup);
 router.post('/login', login);
-router.put('/profile/:id', Auth, updateUser);
+router.put('/profile', Auth, updateUser);
 
 module.exports = router;

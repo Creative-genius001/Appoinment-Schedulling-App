@@ -42,6 +42,7 @@ exports.signup = async (req: Request, res: Response) =>{
         const token = createToken(user._id)
         res.cookie('ckie', token ,{maxAge: 900000, httpOnly: true}) //create cookie for client side auth and session 
         res.status(201).json({
+                    id: user._id,
                     firstname: user.firstname,
                     lastname: user.lastname,
                     email: user.email,
@@ -79,6 +80,7 @@ exports.login =async (req: Request, res: Response) => {
                 const token = createToken(user._id);
 				res.cookie('ckie', token ,{maxAge: 900000, httpOnly: true})
                 res.status(200).json({
+                    id: user._id,
                     firstname: user.firstname,
                     lastname: user.lastname,
                     email: user.email,

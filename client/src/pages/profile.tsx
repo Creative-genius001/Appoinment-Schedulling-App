@@ -1,10 +1,6 @@
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
 import UploadButton from "../components/UploadButton"
 import Link from 'next/link';
 import styles from "@/styles/Login.module.css"
-import {MdModeEditOutline} from 'react-icons/md'
-// import styles from '@/styles/Home.module.css'
 import Image from 'next/image';
 import Avatar from "../../public/assets/avatar.jpeg"
 

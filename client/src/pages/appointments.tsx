@@ -1,6 +1,7 @@
 import { Table, Tag, Button } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { data, DataType } from '@/data/appointmentData'
+import { useEffect } from 'react';
                                                                                                                                                                                                                                                                                                                                        
 const columns: ColumnsType<DataType> = [
   {
@@ -47,6 +48,23 @@ const columns: ColumnsType<DataType> = [
 
 
 const Appointment = () => {
+    useEffect(() => {
+    // Construct the URL with query parameters
+    const searchParams = new URLSearchParams({
+      id: '640a5310ebca7c98fc270d02',
+    });
+    const url = `http://localhost:5000/profil?${searchParams}`;
+
+    // Make a request to the API
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the API response
+        console.log(data);
+      });
+  }, []);
+
+
     return ( 
     <>
         <div className='main mt-[70px] bg-[#ffffff] py-12 px-8 h-auto w-[83vw]'>
